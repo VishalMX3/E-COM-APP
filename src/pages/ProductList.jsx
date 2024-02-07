@@ -52,6 +52,8 @@ const ProductList = () => {
     });
   };
 
+  console.log("filters in product list " + JSON.stringify(filters));
+
   return (
     <Container>
       <Navbar />
@@ -60,16 +62,16 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select name="Color" onChange={handleFilters}>
+          <Select name="color" onChange={handleFilters}>
             <Option disabled>Color</Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
+            <Option>white</Option>
+            <Option>black</Option>
+            <Option>red</Option>
+            <Option>blue</Option>
+            <Option>yellow</Option>
+            <Option>green</Option>
           </Select>
-          <Select name="Size" onChange={handleFilters}>
+          <Select name="size" onChange={handleFilters}>
             <Option disabled>Size</Option>
             <Option>XS</Option>
             <Option>S</Option>
