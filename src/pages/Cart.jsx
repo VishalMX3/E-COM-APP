@@ -175,15 +175,14 @@ const Cart = () => {
       try {
         const res = await userRequest.post("/checkout/payment", {
           tokenId: stripeToken.id,
-          amount: 500,
-          // amount: cart.total * 100,
+          amount: cart.total * 100,
         });
         navigate("/success", { data: res.data });
       } catch (err) {
         console.log(err);
       }
     };
-    stripeToken && makeRequest();
+    stripeToken && cart.total >= 1 && makeRequest();
   }, [stripeToken, cart.total, navigate]);
   return (
     <Container>
