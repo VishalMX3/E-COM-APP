@@ -10,6 +10,7 @@ import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Success from "./pages/Success";
 
 function App() {
   const user = true;
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/products/:category" element={<ProductList />} />
         <Route exact path="/product/:id" element={<Product />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/success" element={<Success />} />
         <Route
           exact
           path="/login"
